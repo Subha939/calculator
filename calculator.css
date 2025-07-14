@@ -1,0 +1,151 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    
+  
+}
+
+.calculator{
+    background-color: black;
+    height: 700px;
+    width: 500px;
+    padding:30px;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    align-items: center;
+    position: relative;
+    
+    
+    z-index: 5;
+     
+    
+}
+
+.animated_box{
+    height: 700px;
+    width: 499px;
+    
+    position: relative;
+    right: 570px;
+    padding: 30px;
+    border-radius: 24px;
+    border: 10px solid;
+    background: rgba(126, 197, 10, 0.95);
+    
+
+}
+.animated_box::before{
+    content: "";
+    position :absolute;
+    inset:-2px;
+    z-index:2;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient( 45deg,
+     orange 0%, red 25%, rgba(19, 130, 215, 0.858) 50%, rgb(255, 179, 0) 75%, darkviolet 100% );
+    background-size: 400% 400%;
+    animation: myAnimation 5s linear infinite;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    /* filter: brightness(1); */
+
+}
+.animated_box::after{
+    content: "";
+    position: absolute;
+    inset: -4px;
+    z-index: -1;
+    background: inherit;
+    /* filter: blur(8px) brightness(1.5); */
+    opacity: 0.9;
+}
+
+
+@keyframes myAnimation {
+    0%{
+        background-position: 00% 00%;
+    }
+    100%{
+        background-position: 400% 400%;
+    }
+}
+
+input{
+    height: 6rem;
+    width:30.5rem;
+    background-color: rgba(240, 248, 255, 0.792);
+    border-radius: 10px;
+    cursor:grab;
+    padding: 5px;
+    box-shadow: inset 0 0 5px;
+    position: relative;
+    z-index: 10;
+
+    font: 2.5rem solid black;
+
+    
+    
+}
+
+.button{
+    background-color: black;
+    height: 570px;
+    width: 500px;
+    margin-top: 10px;
+    margin-left: 1.88px;
+    padding: 0px;
+    border-radius: 10px;
+}
+
+button{
+    height: 90px;
+    width: 95px;
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 21px;
+    border-radius: 20px;
+    background-color: #87CEEB;
+    cursor:pointer;
+    border: 0px;
+    box-shadow: 0 0 5px 5px rgb(91, 86, 236);
+
+}
+
+button:hover{
+    opacity: 0.5;
+}
+
+.plus{
+    background-color: orange;
+
+}
+.minus{
+    background-color: orange;
+}
+.equalTo{
+    background-color: orange;
+}
+.divide {
+    background-color: orange;
+}
+.clear{
+    background-color: red;
+    color: white;
+}
+.equal{
+    width:200px ;
+   background-color: green;
+   color:white
+}
+
